@@ -1,6 +1,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-const uuid = require("uuid/v4");
+const { v4: uuid } = require("uuid");
 
 const app = express();
 
@@ -48,4 +48,4 @@ app.post("/product", (req, res, next) => {
     .json({ message: "Created new product.", product: createdProduct });
 });
 
-app.listen(5000); // start Node + Express server on port 5000
+app.listen(8000); // start Node + Express server on port 5000
